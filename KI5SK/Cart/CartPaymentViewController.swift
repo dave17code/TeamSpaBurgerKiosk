@@ -2,6 +2,7 @@
 import UIKit
 
 class CartPaymentViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var payButton:UIButton!
     
@@ -63,6 +64,3 @@ extension CartPaymentViewController {
         self.dismiss(animated: true)
     }
 }
-
-
-

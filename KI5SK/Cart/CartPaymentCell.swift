@@ -8,6 +8,7 @@
 import UIKit
 
 class CartPaymentCell: UITableViewCell {
+    
     var menu: Menu?
     
     @IBOutlet weak var imageTitle: UIImageView!
@@ -29,7 +30,6 @@ class CartPaymentCell: UITableViewCell {
             numberTitle.text = "\(menu.number)"
             totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: menu))
         }
-        
         setUpView()
     }
     
@@ -51,7 +51,6 @@ extension CartPaymentCell {
         tapAction!(.tapOption)
     }
 }
-
 
 //MARK: - Helpers
 extension CartPaymentCell {

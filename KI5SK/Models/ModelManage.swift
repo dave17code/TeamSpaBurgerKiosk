@@ -8,22 +8,23 @@
 import Foundation
 
 class ModelManage {
+    
     static let shared = ModelManage()
     
-    var cart: [Menu] = [] // 
+    var cart: [Menu] = []
     var totalPrice: Int {
         get {
             var sum = 0
             for menu in cart {
                 sum += getPriceOf(menu: menu)
             }
-            
             return sum
         }
     }
 }
 
 extension ModelManage {
+    
     // 17800 -> "17,800원" 반환
     func formatPrice(_ price:Int) -> String {
         var price: [Character] = Array(String(price))
@@ -41,6 +42,7 @@ extension ModelManage {
     
     // Menu 구조체 넣으면 옵션 포함해서 얼마 인지 Int로 반환
     func getPriceOf(menu: Menu) -> Int {
+        
         var result = menu.price
         
         if let singleOption = menu.singleOption {
@@ -79,7 +81,6 @@ extension ModelManage {
                 }
             }
         }
-        
         return title
     }
     

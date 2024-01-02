@@ -28,7 +28,7 @@ class BurgerViewController: UIViewController {
     // 컬렉션뷰 셀 레이아웃
     func createLayout() -> UICollectionViewCompositionalLayout {
         
-        // item
+        // Item
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
@@ -38,7 +38,6 @@ class BurgerViewController: UIViewController {
         
         // Section
         let section = NSCollectionLayoutSection(group: group)
-        
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 8, trailing: 8)
         
         return UICollectionViewCompositionalLayout(section: section)
@@ -49,8 +48,8 @@ extension BurgerViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //선택 indexPath 넘겨주기
-        //선택 Category 넘겨주기
+        // 선택 indexPath 넘겨주기
+        // 선택 Category 넘겨주기
         selectedIndexPath = indexPath.row
         selectedCategory = .burger
         
@@ -65,26 +64,26 @@ extension BurgerViewController: UICollectionViewDelegate {
 
 extension BurgerViewController: UICollectionViewDataSource {
     
-    //item 개수
+    // item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         bugerData.setMenu()
         return bugerData.bugerMenu.count
     }
     
-    //cell 내부 구현부
+    // cell 내부 구현부
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
         
         bugerData.setMenu()
         
-        //버거 메뉴 사진
+        // 버거 메뉴 사진
         cell.BugerMenuImageView.image = UIImage(named: bugerData.bugerMenu[indexPath.row].photo)
         
-        //버거 메뉴 이름
+        // 버거 메뉴 이름
         cell.BugerMenuNameLable.text = bugerData.bugerMenu[indexPath.row].name
         
-        //버거 메뉴 가격
+        // 버거 메뉴 가격
         cell.BugerMenuPriceLable.text = "\(bugerData.bugerMenu[indexPath.row].price)원"
         
         // 셀 색상
@@ -94,4 +93,3 @@ extension BurgerViewController: UICollectionViewDataSource {
         return cell
     }
 }
-

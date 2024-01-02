@@ -7,7 +7,7 @@
 
 import Foundation
 
-// menu -> detail 식별자
+// Menu -> Detail 식별자
 var selectedIndexPath: Int = 0
 var selectedCategory :Category = .burger
 
@@ -51,8 +51,8 @@ struct MenuData {
         title: "후렌치 후라이",
         items: [(name: "M", price: 0),
                 (name: "L", price: 500)],
-        selected: 0
-    )
+        selected: 0)
+    
     var beverageOption = SingleOption(
         title: "음료",
         items: [
@@ -61,8 +61,8 @@ struct MenuData {
             (name: "사이다 제로M", price: 0),
             (name: "사이다 제로L", price: 500)
         ],
-        selected: 0
-    )
+        selected: 0)
+    
     var sizeOption = SingleOption(
         title: "크기",
         items: [
@@ -101,24 +101,23 @@ struct MenuData {
         price: 10000,
         singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
-        category: .burger
-    )
+        category: .burger)
+    
     lazy var chickenSet = Menu(
         name: "Chicken Set",
         photo: "Chicken Set",
         price: 9000,
         singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
-        category: .burger
-    )
+        category: .burger)
+    
     lazy var shrimpSet = Menu(
         name: "Shrimp Set",
         photo: "Shrimp Set",
         price: 8000,
         singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
-        category: .burger
-    )
+        category: .burger)
     
     lazy var cheeseSet = Menu(
         name: "Cheese Set",
@@ -126,8 +125,7 @@ struct MenuData {
         price: 7000,
         singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
-        category: .burger
-    )
+        category: .burger)
     
     // 음료 메뉴 인스턴스 생성
     lazy var coke = Menu(
@@ -135,22 +133,21 @@ struct MenuData {
         photo: "Coke",
         price: 2000,
         singleOption: [sizeOption],
-        category: .beverage
-    )
+        category: .beverage)
+    
     lazy var cider = Menu(
         name: "Cider",
         photo: "Cider",
         price: 2000,
         singleOption: [sizeOption],
-        category: .beverage
-    )
+        category: .beverage)
+    
     lazy var shake = Menu(
         name: "Shake",
         photo: "Shake",
         price: 3000,
         singleOption: [sizeOption, flavorOption],
-        category: .beverage
-    )
+        category: .beverage)
     
     // 디저트 메뉴 인스턴스 생성
     lazy var pie = Menu(
@@ -158,22 +155,21 @@ struct MenuData {
         photo: "Pie",
         price: 2000,
         singleOption: [sizeOption],
-        category: .side
-    )
+        category: .side)
+    
     lazy var cookie = Menu(
         name: "Cookie",
         photo: "Cookie",
         price: 2500,
         singleOption: [sizeOption],
-        category: .side
-    )
+        category: .side)
+    
     lazy var icecream = Menu(
         name: "Icecreme",
         photo: "Icecreme",
         price: 1500,
         singleOption: [sizeOption, flavorOption],
-        category: .side
-    )
+        category: .side)
     
     // MARK: 메뉴 배열 생성
     var bugerMenu: [Menu] = []

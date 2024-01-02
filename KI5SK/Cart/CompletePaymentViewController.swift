@@ -15,7 +15,7 @@ class CompletePaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         completePaymentGif.animate(withGIFNamed: "CompletePaymentGif") {}
         fireTimer()
     }

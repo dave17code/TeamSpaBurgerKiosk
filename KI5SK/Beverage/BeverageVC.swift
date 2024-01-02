@@ -26,7 +26,7 @@ class BeverageViewController: UIViewController {
     // 컬렉션뷰 셀 레이아웃
     func createLayout() -> UICollectionViewCompositionalLayout {
         
-        // item
+        // Item
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1)))
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
@@ -37,7 +37,6 @@ class BeverageViewController: UIViewController {
         
         // Section
         let section = NSCollectionLayoutSection(group: group)
-        
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 8, trailing: 8)
         
         return UICollectionViewCompositionalLayout(section: section)

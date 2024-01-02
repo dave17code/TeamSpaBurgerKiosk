@@ -8,9 +8,10 @@
 import UIKit
 
 class DessertViewController: UIViewController {
+    
     weak var entryVC:EntryViewController!
     
-    //메뉴 데이터 인스턴스
+    // 메뉴 데이터 인스턴스
     var dessertData = MenuData()
     
     @IBOutlet weak var dessertCollectionView: UICollectionView!
@@ -26,7 +27,7 @@ class DessertViewController: UIViewController {
     // 컬렉션뷰 셀 레이아웃
     func createLayout() -> UICollectionViewCompositionalLayout {
         
-        // item
+        // Item
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1)))
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
@@ -48,8 +49,8 @@ extension DessertViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //선택 indexPath 넘겨주기
-        //선택 Category 넘겨주기
+        // 선택 indexPath 넘겨주기
+        // 선택 Category 넘겨주기
         selectedIndexPath = indexPath.row
         selectedCategory = .side
         
@@ -64,7 +65,7 @@ extension DessertViewController: UICollectionViewDelegate {
 
 extension DessertViewController: UICollectionViewDataSource {
 
-    //item 개수
+    // Item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         dessertData.setMenu()
         return dessertData.dessertMenu.count
@@ -76,13 +77,13 @@ extension DessertViewController: UICollectionViewDataSource {
         
         dessertData.setMenu()
         
-        //디저트 메뉴 사진
+        // 디저트 메뉴 사진
         cell.DessertMenuImageView.image = UIImage(named: dessertData.dessertMenu[indexPath.row].photo)
         
-        //디저트 메뉴 이름
+        // 디저트 메뉴 이름
         cell.DessertMenuNameLable.text = dessertData.dessertMenu[indexPath.row].name
         
-        //디저트 메뉴 가격
+        // 디저트 메뉴 가격
         cell.DessertMenuPriceLable.text = "\(dessertData.dessertMenu[indexPath.row].price)원"
         
         // 셀 색상
