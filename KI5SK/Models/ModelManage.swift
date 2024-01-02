@@ -24,7 +24,7 @@ class ModelManage {
 }
 
 extension ModelManage {
-    /// 17800 -> "17,800원" 반환
+    // 17800 -> "17,800원" 반환
     func formatPrice(_ price:Int) -> String {
         var price: [Character] = Array(String(price))
         
@@ -39,7 +39,7 @@ extension ModelManage {
         return String(price) + "원"
     }
     
-    /// Menu 구조체 넣으면 옵션 포함해서 얼마 인지 Int로 반환
+    // Menu 구조체 넣으면 옵션 포함해서 얼마 인지 Int로 반환
     func getPriceOf(menu: Menu) -> Int {
         var result = menu.price
         
@@ -87,9 +87,3 @@ extension ModelManage {
         cart.removeAll()
     }
 }
-
-
-//Menu(name: "TestName", photo: "", price: 18700,
-//                         singleOption: [.init(title: "SingleOption", items: [("A", 5000), ("B", 2500)], selected: 0)],
-//                         multiOption: [.init(title: "MultiOption", items: [("A", 5000, true)])],
-//                         category: .burger)

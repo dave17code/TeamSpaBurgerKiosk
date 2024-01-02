@@ -7,21 +7,19 @@
 
 import Foundation
 
-//menu -> detail 식별자
+// menu -> detail 식별자
 var selectedIndexPath: Int = 0
 var selectedCategory :Category = .burger
 
-//주문 개수
-
-
+// 주문 개수
 enum Category {
     case burger
     case beverage
     case side
 }
 
-//MARK: 구조체
-//메뉴 구조체
+// MARK: 구조체
+// 메뉴 구조체
 struct Menu {
     var name: String
     var photo: String
@@ -32,14 +30,14 @@ struct Menu {
     var category: Category
 }
 
-//싱글 옵션 구조체
+// 싱글 옵션 구조체
 struct SingleOption {
     let title: String
     var items: [(name: String, price: Int)]
     var selected: Int
 }
 
-//멀티 옵션 구조체
+// 멀티 옵션 구조체
 struct MultiOption {
     let title: String
     var items: [(name: String, price: Int, isSelected: Bool)]
@@ -47,8 +45,8 @@ struct MultiOption {
 
 struct MenuData {
     
-    //MARK: 인스턴스 생성
-    //싱글 옵션 인스턴스
+    // MARK: 인스턴스 생성
+    // 싱글 옵션 인스턴스
     var frenchFrieOption = SingleOption(
         title: "후렌치 후라이",
         items: [(name: "M", price: 0),
@@ -83,7 +81,7 @@ struct MenuData {
         ],
         selected: 0)
     
-    //멀티 옵션 인스턴스
+    // 멀티 옵션 인스턴스
     var extraMenuOption = MultiOption(
         title: "추가 메뉴",
         items: [
@@ -94,9 +92,9 @@ struct MenuData {
             (name: "치즈 스틱", price: 1500, isSelected: false)
         ])
     
-    //MARK: 카테고리별 메뉴 인스턴스 생성
-    //버거 메뉴 인스턴스 생성
-    //옵션 인스턴스 생성 이후 이루어져야 함으로 lazy 키워드 사용
+    // MARK: 카테고리별 메뉴 인스턴스 생성
+    // 버거 메뉴 인스턴스 생성
+    // 옵션 인스턴스 생성 이후 이루어져야 함으로 lazy 키워드 사용
     lazy var bigmacSet = Menu(
         name: "BIGMAC Set",
         photo: "BIGMAC Set",
@@ -131,7 +129,7 @@ struct MenuData {
         category: .burger
     )
     
-    //음료 메뉴 인스턴스 생성
+    // 음료 메뉴 인스턴스 생성
     lazy var coke = Menu(
         name: "Coke",
         photo: "Coke",
@@ -154,7 +152,7 @@ struct MenuData {
         category: .beverage
     )
     
-    //디저트 메뉴 인스턴스 생성
+    // 디저트 메뉴 인스턴스 생성
     lazy var pie = Menu(
         name: "Pie",
         photo: "Pie",
@@ -177,16 +175,15 @@ struct MenuData {
         category: .side
     )
     
-    //MARK: 메뉴 배열 생성
+    // MARK: 메뉴 배열 생성
     var bugerMenu: [Menu] = []
     var beverageMenu: [Menu] = []
     var dessertMenu: [Menu] = []
     
-    //MARK: 카테고리별 메뉴 인스턴스 배열에 추가
+    // MARK: 카테고리별 메뉴 인스턴스 배열에 추가
     mutating func setMenu() {
         bugerMenu = [bigmacSet, chickenSet, shrimpSet, cheeseSet]
         beverageMenu = [coke, cider, shake]
         dessertMenu = [pie, cookie, icecream]
     }
-    
 }

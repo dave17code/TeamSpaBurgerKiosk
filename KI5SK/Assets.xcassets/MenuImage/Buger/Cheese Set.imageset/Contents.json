@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "치즈버거.png",
+      "filename" : "치즈버거 3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "치즈버거 1.png",
+      "filename" : "치즈버거 4.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "치즈버거 2.png",
+      "filename" : "치즈버거.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

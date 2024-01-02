@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -30,16 +30,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KI5SK BURGER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLO-xQ-1PM">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="52"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="31"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-hC-Ntb">
-                                                <rect key="frame" x="0.0" y="60" width="393" height="40"/>
+                                                <rect key="frame" x="0.0" y="52" width="393" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-lM-PL9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="48"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="햄버거 세트"/>
@@ -48,7 +48,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbA-yJ-6Tc">
-                                                        <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="40"/>
+                                                        <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="48"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -66,7 +66,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-Ne-nPp">
-                                                        <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="40"/>
+                                                        <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="48"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="디저트"/>
@@ -76,14 +76,15 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="wg1-vy-32x"/>
+                                                    <constraint firstAttribute="height" constant="48" id="dcT-1B-Hl2"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="5sa-zm-saY"/>
-                                            <constraint firstItem="SSv-hC-Ntb" firstAttribute="leading" secondItem="CYl-JM-jgC" secondAttribute="leading" constant="16" id="Vmj-4b-fol"/>
-                                            <constraint firstAttribute="trailing" secondItem="SSv-hC-Ntb" secondAttribute="trailing" constant="16" id="fsG-Pw-ahh"/>
+                                            <constraint firstAttribute="bottom" secondItem="SSv-hC-Ntb" secondAttribute="bottom" id="6iQ-x4-xxn"/>
+                                            <constraint firstItem="SSv-hC-Ntb" firstAttribute="leading" secondItem="CYl-JM-jgC" secondAttribute="leading" id="n39-Jf-Zqp"/>
+                                            <constraint firstAttribute="trailing" secondItem="SSv-hC-Ntb" secondAttribute="trailing" id="u1t-ke-mvY"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wMt-c1-iUp">
@@ -264,12 +265,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
-                                            <constraint firstItem="Zlt-km-RqU" firstAttribute="leading" secondItem="T37-CZ-5fR" secondAttribute="leading" constant="16" id="JU3-bW-KqQ"/>
-                                            <constraint firstAttribute="height" constant="250" id="cDU-6I-Rhx"/>
-                                            <constraint firstAttribute="trailing" secondItem="Zlt-km-RqU" secondAttribute="trailing" constant="16" id="f8c-2Z-QTp"/>
+                                            <constraint firstAttribute="height" constant="250" id="50E-6Q-OFf"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="T37-CZ-5fR" firstAttribute="leading" secondItem="FEs-Li-Pjp" secondAttribute="leading" id="W69-BC-za5"/>
+                                    <constraint firstAttribute="trailing" secondItem="T37-CZ-5fR" secondAttribute="trailing" id="dcS-Ad-sXW"/>
+                                    <constraint firstAttribute="bottom" secondItem="T37-CZ-5fR" secondAttribute="bottom" id="imu-om-CtE"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
