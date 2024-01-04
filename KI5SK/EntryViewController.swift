@@ -16,6 +16,9 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var totalPrice: UILabel!
+
+    @IBOutlet weak var selectMenu: UILabel!
+    @IBOutlet weak var orderBtn: UIButton!
     
     var burgerVC: BurgerViewController!
     var beverageVC: BeverageViewController!
@@ -27,25 +30,26 @@ class EntryViewController: UIViewController {
         tableView.dataSource = self
         
         burgerVC = UIStoryboard(name: "Burger", bundle: nil).instantiateViewController(withIdentifier: "BurgerViewController") as? BurgerViewController
+                
         beverageVC = UIStoryboard(name: "Beverage", bundle: nil).instantiateViewController(withIdentifier: "BeverageViewController") as? BeverageViewController
         dessertVC = UIStoryboard(name: "Dessert", bundle: nil).instantiateViewController(withIdentifier: "DessertViewController") as? DessertViewController
         
         burgerVC.entryVC = self
         beverageVC.entryVC = self
         dessertVC.entryVC = self
-        
-        contentView.addSubview(burgerVC.view)
-        
+
         initBtn()
-        burgerBtn.layer.backgroundColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
-        burgerBtn.tintColor = .white
-        
+        orderBtn.tintColor = .systemYellow
+        orderBtn.layer.cornerRadius = 8
+            
         self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
         self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
+        
+
     }
     
     @IBAction func orderBtn(_ sender: Any) {
@@ -89,22 +93,27 @@ extension EntryViewController: UITableViewDataSource {
 extension EntryViewController {
     @IBAction func tapTopButton(_ sender: UIButton) {
         initBtn()
-        sender.layer.backgroundColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        sender.layer.backgroundColor = UIColor.lightGray.cgColor
         sender.tintColor = .white
         
         burgerVC.removeFromParent()
         beverageVC.removeFromParent()
         dessertVC.removeFromParent()
+        
         switch sender.titleLabel?.text {
         case "햄버거 세트":
+            selectMenu.isHidden = true
             contentView.addSubview(burgerVC.view)
         case "음료":
+            selectMenu.isHidden = true
             contentView.addSubview(beverageVC.view)
         case "디저트":
+            selectMenu.isHidden = true
             contentView.addSubview(dessertVC.view)
         default:
             return
         }
+        
     }
 }
 

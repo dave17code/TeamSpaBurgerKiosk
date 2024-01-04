@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,21 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="버거" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-gS-nXQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-gS-nXQ">
                                 <rect key="frame" x="72" y="301.66666666666669" width="249" height="249.00000000000006"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="WYw-gS-nXQ" secondAttribute="height" multiplier="1:1" id="BY7-dv-rSN"/>
+                                    <constraint firstAttribute="height" constant="249" id="S7B-ZW-aDd"/>
+                                    <constraint firstAttribute="width" constant="249" id="vST-V5-tzN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KI5SK Buger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4B-Pg-kfa">
-                                <rect key="frame" x="70.666666666666686" y="237.66666666666663" width="252" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KI5SK Buger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4B-Pg-kfa">
+                                <rect key="frame" x="60" y="231.66666666666663" width="273.33333333333331" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Y5e-T1-J1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-vK-5rp">
-                                <rect key="frame" x="106.66666666666669" y="566.66666666666663" width="180" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-vK-5rp">
+                                <rect key="frame" x="108.66666666666669" y="566.66666666666663" width="176" height="45.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45.670000000000002" id="yFp-TB-ks0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,13 +46,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="gfn-vK-5rp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lde-ZI-O1C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYw-gS-nXQ" secondAttribute="trailing" constant="72" id="QxD-Pd-GtC"/>
-                            <constraint firstItem="gfn-vK-5rp" firstAttribute="top" secondItem="WYw-gS-nXQ" secondAttribute="bottom" constant="16" id="Rvy-Y9-8e4"/>
-                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="n40-oH-WVq"/>
-                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ndo-UN-MnO"/>
-                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="top" secondItem="K4B-Pg-kfa" secondAttribute="bottom" constant="16" id="pcg-AM-uag"/>
-                            <constraint firstItem="K4B-Pg-kfa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qDW-XD-8An"/>
+                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9Rs-WQ-UVq"/>
+                            <constraint firstItem="gfn-vK-5rp" firstAttribute="top" secondItem="WYw-gS-nXQ" secondAttribute="bottom" constant="16" id="Scr-zl-UST"/>
+                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="top" secondItem="K4B-Pg-kfa" secondAttribute="bottom" constant="16" id="Xz2-o0-xHQ"/>
+                            <constraint firstItem="WYw-gS-nXQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zq0-zp-S3b"/>
+                            <constraint firstItem="gfn-vK-5rp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dLw-EH-7tt"/>
+                            <constraint firstItem="K4B-Pg-kfa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qfI-dt-kJS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,7 +61,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="버거" width="128" height="128"/>
+        <image name="LaunchScreen" width="230.66667175292969" height="244"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

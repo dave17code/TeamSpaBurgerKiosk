@@ -4,7 +4,7 @@ import UIKit
 class CartPaymentViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var payButton:UIButton!
+    @IBOutlet weak var payButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,7 +12,7 @@ class CartPaymentViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+        payButton.setTitle(ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기", for: .normal)
     }
 }
 
@@ -24,18 +24,17 @@ extension CartPaymentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell") as? CartPaymentCell else { return CartPaymentCell() }
         cell.menu = ModelManage.shared.cart[indexPath.row]
-        cell.tapAction = { buttonType in
+        cell.tapAction = { [self] buttonType in
             switch buttonType {
             case .add:
                 ModelManage.shared.cart[indexPath.row].number += 1
-                self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+                self.payButton.setTitle(ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기", for: .normal)
                 tableView.reloadData()
             case .sub:
                 if ModelManage.shared.cart[indexPath.row].number > 1 {
                     ModelManage.shared.cart[indexPath.row].number -= 1
-                    self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+                    self.payButton.setTitle(ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기", for: .normal)
                     tableView.reloadData()
-                    
                 }
             case .tapOption:
                 let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)

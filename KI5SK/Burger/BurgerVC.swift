@@ -8,7 +8,8 @@
 import UIKit
 
 class BurgerViewController: UIViewController {
-    weak var entryVC:EntryViewController!
+    
+    weak var entryVC: EntryViewController!
     
     var carts:[Menu] = []
     
@@ -22,7 +23,9 @@ class BurgerViewController: UIViewController {
         
         burgerCollectionView.delegate = self
         burgerCollectionView.dataSource = self
+        burgerCollectionView.showsVerticalScrollIndicator = false
         burgerCollectionView.collectionViewLayout = createLayout()
+        burgerCollectionView.isPagingEnabled = true
     }
     
     // 컬렉션뷰 셀 레이아웃

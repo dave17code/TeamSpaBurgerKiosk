@@ -8,7 +8,8 @@
 import UIKit
 
 class BeverageViewController: UIViewController {
-    weak var entryVC:EntryViewController!
+    
+    weak var entryVC: EntryViewController!
     
     //메뉴 데이터 인스턴스
     var beverageData = MenuData()

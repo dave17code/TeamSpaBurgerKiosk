@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y7f-zf-MSx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y7f-zf-MSx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -28,7 +28,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-Rh-365">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ylt-7q-sNI">
                                     <size key="itemSize" width="237" height="210"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -84,12 +84,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fEx-yE-Zxd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="IGY-Rh-365" firstAttribute="leading" secondItem="fEx-yE-Zxd" secondAttribute="leading" id="CtB-OD-Yg0"/>
-                            <constraint firstItem="IGY-Rh-365" firstAttribute="trailing" secondItem="fEx-yE-Zxd" secondAttribute="trailing" id="IV9-FY-GI5"/>
-                            <constraint firstAttribute="bottom" secondItem="IGY-Rh-365" secondAttribute="bottom" id="WaI-Cd-3AN"/>
-                            <constraint firstItem="IGY-Rh-365" firstAttribute="top" secondItem="FWv-Ew-kjm" secondAttribute="top" id="XyH-lf-doD"/>
+                            <constraint firstAttribute="bottom" secondItem="IGY-Rh-365" secondAttribute="bottom" id="0w7-RA-WVq"/>
+                            <constraint firstItem="IGY-Rh-365" firstAttribute="leading" secondItem="fEx-yE-Zxd" secondAttribute="leading" id="OFF-li-sNR"/>
+                            <constraint firstItem="IGY-Rh-365" firstAttribute="top" secondItem="FWv-Ew-kjm" secondAttribute="top" id="m16-L3-p0D"/>
+                            <constraint firstItem="IGY-Rh-365" firstAttribute="trailing" secondItem="fEx-yE-Zxd" secondAttribute="trailing" id="vg9-1V-eyv"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
@@ -103,11 +103,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
