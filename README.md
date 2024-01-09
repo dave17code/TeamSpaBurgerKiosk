@@ -2,7 +2,7 @@
 
 ### 키오스크 햄버거 주문 앱 🍔 | 팀 프로젝트 
 
-#### 전체 화면 구성 총 5개
+#### 전체 화면 구성
 <img width="210" alt="TeamSpaBurgerKiosk 1" src="https://github.com/dave17code/TeamSpaBurgerKiosk/assets/151927621/26d24488-8ba7-486b-a764-8b5ec962eaa4"><img width="210" alt="TeamSpaBurgerKiosk 2" src="https://github.com/dave17code/TeamSpaBurgerKiosk/assets/151927621/a8276f11-049e-4bb9-a9cc-732bc889225f"><img width="210" alt="TeamSpaBurgerKiosk 3" src="https://github.com/dave17code/TeamSpaBurgerKiosk/assets/151927621/dcba38fb-1cd7-4577-a77b-e357b6508a2e">
 
 
